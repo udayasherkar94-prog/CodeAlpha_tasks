@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>My Image Gallery</h1>
+
+
+
+<div class="gallery">
+
+<img src="https://picsum.photos/400?1" class="gallery-item nature" onclick="openLightbox(0)">
+<img src="https://picsum.photos/400?2" class="gallery-item city" onclick="openLightbox(1)">
+<img src="https://picsum.photos/400?3" class="gallery-item animals" onclick="openLightbox(2)">
+<img src="https://picsum.photos/400?4" class="gallery-item nature" onclick="openLightbox(3)">
+<img src="https://picsum.photos/400?5" class="gallery-item city" onclick="openLightbox(4)">
+<img src="https://picsum.photos/400?6" class="gallery-item animals" onclick="openLightbox(5)">
+
+<img src="https://picsum.photos/400?7" class="gallery-item nature" onclick="openLightbox(7)">
+<img src="https://picsum.photos/400?8" class="gallery-item city" onclick="openLightbox(8)">
+<img src="https://picsum.photos/400?9" class="gallery-item animals" onclick="openLightbox(9)">
+<img src="https://picsum.photos/400?10" class="gallery-item nature" onclick="openLightbox(10)">
+<img src="https://picsum.photos/400?11" class="gallery-item city" onclick="openLightbox(11)">
+<img src="https://picsum.photos/400?12" class="gallery-item animals" onclick="openLightbox(12)">
+
+
+<img src="https://picsum.photos/400?13" class="gallery-item nature" onclick="openLightbox(13)">
+<img src="https://picsum.photos/400?14" class="gallery-item city" onclick="openLightbox(14)">
+<img src="https://picsum.photos/400?15" class="gallery-item animals" onclick="openLightbox(15)">
+
+
+</div>
+
+<div id="lightbox">
+
+<span class="close" onclick="closeLightbox()">×</span>
+
+<img id="lightbox-img">
+
+<button class="prev" onclick="changeImage(-1)">❮</button>
+<button class="next" onclick="changeImage(1)">❯</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
