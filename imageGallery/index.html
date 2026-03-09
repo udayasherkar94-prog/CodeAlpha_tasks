@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Gallery</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1>My Image Gallery</h1>
+   <div class="container">
+    <h1>Portfolio Gallery</h1>
+    
+    <div class="filter-wrapper">
+        <button class="filter-btn active" onclick="filterImages('all', event)">All</button>
+        <button class="filter-btn" onclick="filterImages('nature', event)">Nature</button>
+        <button class="filter-btn" onclick="filterImages('city', event)">City</button>
+        <button class="filter-btn" onclick="filterImages('arch', event)">Architecture</button>
+    </div>
 
+    <div class="gallery-grid" id="gallery">
+        <div class="gallery-item nature"><img src="https://picsum.photos/id/10/800/600" alt="Forest" onclick="openLightbox(0)"></div>
+        <div class="gallery-item nature"><img src="https://picsum.photos/id/28/800/600" alt="Mountains" onclick="openLightbox(1)"></div>
+        <div class="gallery-item nature"><img src="https://picsum.photos/id/15/800/600" alt="Waterfall" onclick="openLightbox(2)"></div>
+        <div class="gallery-item nature"><img src="https://picsum.photos/id/16/800/600" alt="Sea" onclick="openLightbox(3)"></div>
 
+        <div class="gallery-item city"><img src="https://picsum.photos/id/43/800/600" alt="Skyscrapers" onclick="openLightbox(4)"></div>
+        <div class="gallery-item city"><img src="https://picsum.photos/id/48/800/600" alt="Night Street" onclick="openLightbox(5)"></div>
+        <div class="gallery-item city"><img src="https://picsum.photos/id/33/800/600" alt="Bridge" onclick="openLightbox(6)"></div>
+        <div class="gallery-item city"><img src="https://picsum.photos/id/57/800/600" alt="Cafe" onclick="openLightbox(7)"></div>
 
-<div class="gallery">
-
-<img src="https://picsum.photos/400?1" class="gallery-item nature" onclick="openLightbox(0)">
-<img src="https://picsum.photos/400?2" class="gallery-item city" onclick="openLightbox(1)">
-<img src="https://picsum.photos/400?3" class="gallery-item animals" onclick="openLightbox(2)">
-<img src="https://picsum.photos/400?4" class="gallery-item nature" onclick="openLightbox(3)">
-<img src="https://picsum.photos/400?5" class="gallery-item city" onclick="openLightbox(4)">
-<img src="https://picsum.photos/400?6" class="gallery-item animals" onclick="openLightbox(5)">
-
-<img src="https://picsum.photos/400?7" class="gallery-item nature" onclick="openLightbox(7)">
-<img src="https://picsum.photos/400?8" class="gallery-item city" onclick="openLightbox(8)">
-<img src="https://picsum.photos/400?9" class="gallery-item animals" onclick="openLightbox(9)">
-<img src="https://picsum.photos/400?10" class="gallery-item nature" onclick="openLightbox(10)">
-<img src="https://picsum.photos/400?11" class="gallery-item city" onclick="openLightbox(11)">
-<img src="https://picsum.photos/400?12" class="gallery-item animals" onclick="openLightbox(12)">
-
-
-<img src="https://picsum.photos/400?13" class="gallery-item nature" onclick="openLightbox(13)">
-<img src="https://picsum.photos/400?14" class="gallery-item city" onclick="openLightbox(14)">
-<img src="https://picsum.photos/400?15" class="gallery-item animals" onclick="openLightbox(15)">
-
-
+        <div class="gallery-item arch"><img src="https://picsum.photos/id/75/800/600" alt="Modern Hall" onclick="openLightbox(8)"></div>
+        <div class="gallery-item arch"><img src="https://picsum.photos/id/84/800/600" alt="Old Window" onclick="openLightbox(9)"></div>
+        <div class="gallery-item arch"><img src="https://picsum.photos/id/122/800/600" alt="Glass Building" onclick="openLightbox(10)"></div>
+        <div class="gallery-item arch"><img src="https://picsum.photos/id/142/800/600" alt="Stairs" onclick="openLightbox(11)"></div>
+    </div>
 </div>
 
-<div id="lightbox">
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightbox-img" src="" alt="Zoomed view">
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
 
-<span class="close" onclick="closeLightbox()">×</span>
-
-<img id="lightbox-img">
-
-<button class="prev" onclick="changeImage(-1)">❮</button>
-<button class="next" onclick="changeImage(1)">❯</button>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
