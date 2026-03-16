@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Music Player</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="player">
+
+<div class="album">
+<img id="cover" src="images/cover1.jpg">
+</div>
+
+<h2 id="title">Song Name</h2>
+<p id="artist">Artist</p>
+
+<div class="time">
+<span id="current">0:00</span>
+<span id="duration">0:00</span>
+</div>
+
+<input type="range" id="progress" value="0">
+
+<div class="controls">
+
+<button onclick="prevSong()">⏮</button>
+<button id="playBtn" onclick="playPause()">▶</button>
+<button onclick="nextSong()">⏭</button>
+
+</div>
+
+<div class="volume">
+
+🔊
+<input type="range" id="volume" min="0" max="1" step="0.01">
+
+</div>
+
+</div>
+
+<div class="playlist">
+
+<h3>Playlist</h3>
+
+<ul id="playlist"></ul>
+
+</div>
+
+<audio id="audio"></audio>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
